@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --main-color: #000;
+  --second-color: #ffffff;
+}
+
+body {
+  font-family: "PT Sans Caption", sans-serif;
+  background-color: var(--main-color);
+  color: var(--second-color);
+}
+.navbar h3 {
+  font-family: "Black Han Sans", sans-serif;
+  position: relative;
+}
+.navbar h3 div {
+  position: absolute;
+  left: 75%;
+  top: 0;
+  z-index: -1;
+  width: 40px;
+}
+.navbar h1 div img {
+  width: 50px;
+}
+/* Headrt */
+.header .headerDeatil h1,
+.truntable h1,
+.whoAre h1,
+.vinly h1 {
+  font-family: "Black Han Sans", sans-serif;
+  font-size: 50px;
+}
+
+.header .headerDeatil div {
+  width: 100%;
+  height: 610px;
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  position: relative;
+  cursor: pointer;
+  filter: grayscale(1);
+}
+.header .headerDeatil div::before {
+  content: "";
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  position: absolute;
+  width: 305px;
+  height: 150px;
+  background-color: #252236;
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  z-index: 1;
+}
+.header .headerDeatil div:hover {
+  filter: grayscale(0);
+  -webkit-filter: grayscale(0);
+}
+
+.header .headerDeatil div img:hover {
+  animation: rotateimg 0.5s linear infinite;
+  -webkit-animation: rotateimg 20s linear infinite;
+}
+
+@keyframes rotateimg {
+  0% {
+    rotate: 0deg;
+  }
+  50% {
+    rotate: 180deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+/* truntable */
+.truntable img {
+  filter: brightness(50%);
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+.truntable img:hover {
+  filter: brightness(100%);
+  -webkit-filter: brightness(100%);
+  cursor: pointer;
+}
+/* Vinly */
+.vinly .imgcd img {
+  position: absolute;
+  bottom: 0;
+  right: 10%;
+  z-index: -1;
+  transition: all 0.3s;
+}
+.vinly .imgSong {
+  filter: brightness(50%);
+  transition: all 0.3s;
+}
+.vinly .imgSong:hover img {
+  right: 0%;
+  cursor: pointer;
+}
+.vinly .imgSong:hover {
+  filter: brightness(100%);
+}
+.map_iframe {
+  width: 100%;
+  height: 250px;
+}
